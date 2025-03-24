@@ -20,7 +20,7 @@ int main() {
 }
 
 
-Mips 32:
+MIPS 32:
 
 .data
     # Declaração das variáveis
