@@ -37,7 +37,7 @@ int main() {
 }
 
 
-Mips 32:
+MIPS 32:
 
 .data
 v:  .word 10, 20, 30, 40, 50       # Vetor v com os valores {10, 20, 30, 40, 50}
