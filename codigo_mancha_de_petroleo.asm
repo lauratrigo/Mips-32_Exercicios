@@ -19,7 +19,8 @@ int main() {
     return 0;
 }
 
-Mips 32:
+
+MIPS 32:
 
 .data
     pi: .float 3.14159
