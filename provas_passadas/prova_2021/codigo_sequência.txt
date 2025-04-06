@@ -1,0 +1,19 @@
+Um projetista de compilador está tentando decidir entre duas sequências de código para uma determinada máquina. 
+Para tanto, obteve com a equipe de hardware os seguintes dados:
+Classe de Instrução         CPI para esta classe de Instrução
+        A                                   1
+        B                                   2
+        C                                   3
+Considerando o código a ser gerado para uma particular declaração e uma linguagem de alto nível, o responsável 
+pelo projeto do compilador está considerando duas possíveis sequências de código, com as seguintes contagens de
+instruções:
+Sequência de                    Número de Instrução para a classe
+   Código                       A               B               C
+    1                           2               1               2
+    2                           4               1               1
+Qual das duas sequências executa mais instruções? Qual a mais rápida? Qual a CPI para cada sequência?
+
+R: A Sequência 2 tem mais instruções (6) que a Sequência 1 (5), mas é mais rápida (9 ciclos contra 10). Isso 
+acontece porque ela usa mais instruções rápidas (A) e menos lentas (C). Seu CPI é melhor (1.5 contra 2.0). Ou 
+seja: menos instruções não significa sempre mais velocidade - o tipo de instrução importa mais. A Sequência 2 
+é a melhor opção.
