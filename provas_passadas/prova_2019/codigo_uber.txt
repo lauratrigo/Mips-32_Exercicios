@@ -1,0 +1,45 @@
+1) (5,00 pontos) “Após desagradar taxistas mundo afora, o Uber cria um serviço que promete deixar bravos seus próprios motoristas. A empresa de transporte
+individual lançou nesta quarta-feira (14) uma modalidade de carros que dispensam condutores, um passo que pode revolucionar o setor.”
+“A experiência parte do Centro de Tecnologias Avançadas do Uber e é feita com carros modelo Ford Fusion híbrido.”
+“O carro também coleta dados de mapeamento enquanto trafega para melhorar a compreensão do sistema sobre como dirigir.”
+
+Sobre o exposto acima e com base na Teoria de Arquitetura de Computadores, responda:
+a) Indique qual(is) Classe(s) de Computadores existe(m) em todo o sistema automatizado do UBER, explicando o porquê e onde são
+aplicados na operação do serviço;
+b) Indique quais seriam os inputs e outputs das arquiteturas envolvidas. Faça um fluxograma indicando.
+c) Se uma das arquiteturas fosse MIPS, indique 3 pseudoinstruções que existiriam no programa. Explique por que ela estaria no código do sistema automatizado.
+d) Quais seriam as características principais das classes
+indicadas por você na letra a, necessárias e críticas para a operação do sistema?
+e) Escreva a codificação binária (opcode, etc.) das instruções reais que compõem as pseudo-instruções que você citou no item d
+
+R: 
+
+a) Classes de Computadores no sistema automatizado do Uber:
+O sistema utiliza três classes principais: sistemas embarcados em tempo real (RTOS) para controle direto do veículo, garantindo respostas imediatas e seguras; 
+computadores de alto desempenho para processar dados complexos de sensores e inteligência artificial, essenciais para navegação autônoma; e unidades de comunicação 
+V2X, que permitem a interação com infraestrutura urbana e outros veículos, assegurando coordenação em tempo real. Cada classe atende a uma necessidade específica, 
+desde o controle físico até a tomada de decisões e comunicação externa.
+
+c) Pseudoinstruções MIPS e justificativas:
+Três pseudoinstruções críticas seriam:
+
+mov.s $f12, $f0 (para cálculos de trajetória com floats),
+
+la $t0, sensor_data (acesso rápido a dados de sensores), e
+
+blt $t0, $t1, emergency_stop (controle de segurança). Elas são essenciais para operações de baixo nível, como processamento de dados e respostas emergenciais, garantindo 
+eficiência e precisão.
+
+d) Características críticas das classes:
+Os sistemas embarcados exigem baixa latência e redundância para segurança; os computadores de alto desempenho precisam de paralelismo (GPUs) e largura de banda elevada 
+para processar dados de sensores; e as unidades V2X requerem conectividade 5G e segurança cibernética para comunicação confiável. Essas características são vitais para 
+operação contínua e segura.
+
+e) Codificação binária das pseudoinstruções:
+As pseudoinstruções são traduzidas em instruções binárias reais:
+
+mov.s $f12, $f0 vira uma operação COP1 (010001...).
+
+la $t0, sensor_data divide-se em lui (carrega parte alta do endereço) e ori (completa com o offset).
+
+blt é implementado com slt (comparação) e bne (desvio condicional). Esses códigos permitem operações eficientes diretamente no hardware.
