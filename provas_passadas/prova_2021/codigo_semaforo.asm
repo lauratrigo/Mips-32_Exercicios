@@ -7,6 +7,8 @@
 # definir o espaço de dados.
 # c) Faça o fluxograma dos modos de endereçamento utilizados no código da alínea anterior. 
 
+Um automóvel autônomo integrado a sistemas de tráfego inteligente requer **quatro classes principais de computadores**: (1) **sistemas embarcados em tempo real (RTOS)** para controle preciso e imediato de aceleração, frenagem e direção, garantindo respostas determinísticas; (2) **computadores de alto desempenho** com capacidade para processar dados complexos de sensores (LIDAR, câmeras) e algoritmos de IA, responsáveis por calcular a trajetória e sincronizar com os semáforos; (3) **unidades de comunicação V2X** (Vehicle-to-Everything) para troca de dados em tempo real com a infraestrutura urbana, como semáforos e outros veículos, assegurando coordenação e redundância; e (4) **computadores de bordo** para interface com passageiros e exibição de informações em tempo real. Essa divisão equilibra **segurança** (RTOS), **processamento avançado** (IA), **conectividade** (V2X) e **usabilidade** (interface), permitindo que o veículo opere de forma autônoma e eficiente na "onda verde".
+
 C:
 
 #include <stdio.h>
