@@ -42,4 +42,4 @@ Este repositório foi criado por Laura Trigo como parte dos estudos da disciplin
 
 ---
 
-Feito com 💻 por Laura Trigo.
+Feito por Laura Trigo 💻
